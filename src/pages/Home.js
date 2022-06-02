@@ -26,7 +26,7 @@ const deletecontact=(id)=>{
   if (window.confirm('confirm delete contact!!')) {
     axios.delete(`https://aqueous-oasis-40007.herokuapp.com/api/remove/${id}`);
     toast.success('contact deleted successfully');
-    setTimeout(()=>loadData(),500)
+    setTimeout(()=>loadData(),50)
   }
 }
 
