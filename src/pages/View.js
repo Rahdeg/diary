@@ -24,7 +24,7 @@ const View = () => {
     <h2 class="f5 fw4 gray mt0">{user.contact} </h2>
   </div>
   <Link to='/'>
-  <div class="mt3"><input class=" ph3 pv2 input-reset ba b--black white grow pointer f6 w-100 measure bg-black" type="submit" value="Go Back"/></div>
+  <div class="mt3"><input class=" ph3 pv2 input-reset ba b--black white grow pointer f6 w-100 measure bg-black" type="submit" value="Go Backward"/></div>
   </Link>
 </article>
 
