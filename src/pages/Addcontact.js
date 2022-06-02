@@ -22,7 +22,7 @@ const Addcontact = () => {
 
     useEffect(() => {
       
-    axios.get(`http://localhost:5000/api/get/${id}`)
+    axios.get(`https://aqueous-oasis-40007.herokuapp.com/api/get/${id}`)
     .then((resp)=> setState({...resp.data[0]}))
      
     }, [id])
@@ -36,7 +36,7 @@ const Addcontact = () => {
       toast.error('input value into each fields');
     }else {
       if (!id) {
-        axios.post('http://localhost:5000/api/post',{
+        axios.post('https://aqueous-oasis-40007.herokuapp.com/api/post',{
         name,email,contact
       }).then(()=>{
         setState({name:'',email:'',contact:''});
@@ -44,7 +44,7 @@ const Addcontact = () => {
       toast.success('Contact Added Successfully')
       setTimeout(()=>navigate('/'),500);
       } else {
-        axios.put(`http://localhost:5000/api/update/${id}`,{
+        axios.put(`https://aqueous-oasis-40007.herokuapp.com/api/update/${id}`,{
         name,email,contact
       }).then(()=>{
         setState({name:'',email:'',contact:''});

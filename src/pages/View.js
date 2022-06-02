@@ -10,7 +10,7 @@ const View = () => {
     const {id}= useParams();
     useEffect(() => {
       
-        axios.get(`http://localhost:5000/api/get/${id}`)
+        axios.get(`https://aqueous-oasis-40007.herokuapp.com/api/get/${id}`)
         .then((resp)=> setuser({...resp.data[0]}))
          
         }, [id])

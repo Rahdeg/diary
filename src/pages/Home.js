@@ -9,7 +9,7 @@ import { toast } from 'react-toastify'
 
 const Home = () => {
     const [contact, setContact] = useState([])
-    const url = 'http://localhost:5000/api/get'
+    const url = 'https://aqueous-oasis-40007.herokuapp.com/api/get'
 
     const loadData = async () =>{
         const response = await axios.get(url);
@@ -24,7 +24,7 @@ useEffect(() => {
 
 const deletecontact=(id)=>{
   if (window.confirm('confirm delete contact!!')) {
-    axios.delete(`http://localhost:5000/api/remove/${id}`);
+    axios.delete(`https://aqueous-oasis-40007.herokuapp.com/api/remove/${id}`);
     toast.success('contact deleted successfully');
     setTimeout(()=>loadData(),500)
   }
